@@ -1,0 +1,38 @@
+@import '~css/public.scss';
+
+.ExchangeNoticeDetail{
+    .Container{
+        background-color: #fff!important;
+    }
+
+    .dataWrap{
+        width: 100%;
+        padding: $padding2;
+        background-color: #fff;
+        .title{
+            width: 100%;
+            h3{
+                width: 100%;
+                padding: .1rem 0;
+                line-height: .2rem;
+                font-size: .16rem;
+            }
+            h4{
+                width: 100%;
+                line-height: .2rem;
+            }
+        }
+
+        .hint{
+            width: 100%;
+            padding: .1rem;
+            margin: .1rem 0;
+            line-height: .2rem;
+            background-color: $pageBg;
+            >a{
+                padding: 0 .02rem;
+                color: $main;
+            }
+        }
+    }
+}

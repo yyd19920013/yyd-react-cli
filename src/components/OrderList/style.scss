@@ -1,0 +1,146 @@
+@import '~css/public.scss';
+
+.order-wrap {
+  background-color:$pageBg;
+.order-list {
+  margin-bottom:.15rem;
+  width:100%;
+  padding:0 .15rem;
+  background-color:$bg;
+  margin-top:.15rem;
+  .Container {
+    border-top:0;
+  }
+  .order-header {
+    padding-bottom:.12rem;
+    .labels-state {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height:.34rem;
+      border-bottom:.005rem solid $minorText;
+      .labels {
+        span {
+          font-size:.14rem;
+        }
+        .time {
+          font-size:.12rem;
+          color:$minorText;
+          padding-left:.07rem;
+        }
+      }
+      .time {
+        padding-right:.03rem;
+        color:$minor;
+        font-size:.12rem;
+      }
+      .default-state{
+        color:$warnText;
+      }
+      .revert-state,.fail-state {
+        color:$minorText;
+      }
+      .wait-state {
+        color:$buy;
+      }
+      .success-state {
+        color:$buy;
+      }
+    }
+    .order-detail {
+      .order-item {
+        padding-top:.12rem;
+        font-size:.12rem;
+        display:flex;
+        justify-content: space-between;
+        .item-prise {
+            font-size:.14rem;
+        }
+        .prise-txt {
+          color:$minorText;
+        }
+        .amount {
+          font-size:.16rem;
+        }
+      }
+    }
+  }
+
+    .detail-list {
+      .list-item {
+        display: flex;
+        justify-content: space-between;
+        padding:.1rem 0;
+        span {
+          display: block;
+        }
+        .labels {
+          color:$minorText;
+          width:1rem;
+        }
+        .item {
+          flex:1;
+        }
+        .copy {
+          color:$main;
+          width:.25rem;
+        }
+
+      }
+    }
+    .order-operate {
+      border-top:.005rem solid $minorText;
+      padding-top:.1rem;
+      dl{
+        padding-bottom:.2rem;
+        dt,dd{
+          color:#fcbe3b;
+          font-size:0.12rem;
+        }
+      }
+
+      .operate-btn {
+        display:flex;
+        justify-content: flex-end;
+        padding-bottom:.2rem;
+        .btn-revert {
+          margin-right:.1rem;
+        }
+      }
+    }
+  }
+}
+.order-content {
+  padding-bottom:.5rem;
+  .no-data{
+    width:1rem;
+    margin:.3rem auto;
+    text-align: center;
+    .icon-B-Copy2 {
+      font-size:.5rem;
+      color:$minor;
+    }
+    .txt{
+      font-size:.16rem;
+      color:$minor;
+    }
+  }
+  .more {
+    text-align: center;
+    height:.5rem;
+    line-height: .5rem;
+    background-color:$pageBg;
+    cursor: pointer;
+  }
+}
+.order-content .cancel-order {
+  .Dialog .DialogWrap {
+    width:3rem;
+  }
+  .Dialog.active .DialogWrap {
+    transform: translate3d(-50%, -50%, 0) scale(1, 1);
+    -webkit-transform: translate3d(-50%, -50%, 0) scale(1, 1);
+    bottom:auto;
+    top:50%;
+  }
+}

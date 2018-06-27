@@ -1,0 +1,57 @@
+@import '~css/public.scss';
+
+.NewsFlash{
+    .dataWrap{
+        width: 100%;
+        .title{
+            width: 100%;
+            padding: 0 $padding2;
+            height: .3rem;
+            line-height: .3rem;
+            background-color: #fff;
+            color: $minor;
+        }
+
+        .dataList{
+            width: 100%;
+            padding: 0 $padding2;
+            background-color: #fff;
+            ul{
+                width: 100%;
+                border-left: .01rem solid $grayText;
+                padding-bottom: 0.01rem;
+                li{
+                    width: 100%;
+                    padding-left: .1rem;
+                    margin-bottom: .2rem;
+                    position: relative;
+                    &:before{
+                        content: "";
+                        width: .07rem;
+                        height: .07rem;
+                        border-radius: 50%;
+                        background-color: $grayText;
+                        position: absolute;
+                        left: -.04rem;
+                        top: 0;
+                    }
+                    .title{
+                        width: 100%;
+                        height:.2rem;
+                        line-height: .2rem;
+                        font-size: .12rem;
+                    }
+                    .main{
+                        width: 100%;
+                        padding-left: .05rem;
+                        line-height: .24rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .moreData{
+        @include moreData1;
+    }
+}

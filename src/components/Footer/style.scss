@@ -1,0 +1,72 @@
+@import '~css/public.scss';
+
+.Footer{
+    width: 100%;
+    height: .5rem;
+    border-top: .01rem solid $grayText;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    display: -webkit-flex;
+    a{
+        display: flex;
+        display: -webkit-flex;
+        flex: 1;
+        -webkit-flex: 1;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
+        color: $minor;
+        span{
+            padding-top: .25rem;
+            line-height: .2rem;
+            font-size: .12rem;
+            background: url('../../images/icon/icon15.png') no-repeat center .05rem;
+            background-size: .16rem;
+        }
+        &:nth-of-type(2){
+            span{
+                background-image: url('../../images/icon/icon16.png');
+            }
+        }
+        &:nth-of-type(3){
+            span{
+                background-image: url('../../images/icon/icon17.png');
+            }
+        }
+        &:nth-of-type(4){
+            span{
+                background-image: url('../../images/icon/icon18.png');
+            }
+        }
+        &.active{
+            color: $main;
+        }
+        &.active:nth-of-type(1){
+            span{
+                background-image: url('../../images/icon/icon15-active.png');
+            }
+        }
+         &.active:nth-of-type(2){
+            span{
+                background-image: url('../../images/icon/icon16-active.png');
+            }
+        }
+         &.active:nth-of-type(3){
+            span{
+                background-image: url('../../images/icon/icon17-active.png');
+            }
+        }
+         &.active:nth-of-type(4){
+            span{
+                background-image: url('../../images/icon/icon18-active.png');
+            }
+        }
+    }
+}

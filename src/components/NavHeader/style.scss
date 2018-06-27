@@ -1,0 +1,40 @@
+@import '~css/public.scss';
+
+.NavHeader{
+    width: 100%;
+    padding: 0 .5rem;
+    height: .4rem;
+    line-height: .4rem;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    .goBack{
+        width: .5rem;
+        padding-left: $padding2;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        i{
+            float: left;
+            color: $minorText;
+            font-size: .16rem;
+        }
+    }
+    a{
+        display: inline-block;
+        height: 100%;
+        margin: 0 .15rem;
+        color: $mainText;
+        border-bottom: 0.02rem solid transparent;
+        font-size: .16rem;
+        &.active{
+            color: $main;
+            border-bottom-color: $main;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@import '~css/public.scss';
+
+.ExchangeNotice{
+    .dataWrap{
+        width: 100%;
+        .dataList{
+            width: 100%;
+            padding: 0 $padding2;
+            background-color: #fff;
+            li{
+                width: 100%;
+                padding: .1rem 0;
+                border-bottom: .01rem solid $minor;
+                &:last-of-type{
+                    border-bottom: none;
+                }
+                a{
+                    >img{
+                        float: left;
+                        width: .5rem;
+                        height: .5rem;
+                        border: 0.01rem solid #ddd;
+                        border-radius: 50%;
+                        background: url('') no-repeat center center;
+                        background-size: cover;
+                    }
+                    .right{
+                        overflow: hidden;
+                        padding-left: .1rem;
+                        h3{
+                            line-height: .25rem;
+                            word-break: break-all;
+                            font-weight: bold;
+                        }
+                        span{
+                            line-height: .2rem;
+                            padding-top: .05rem;
+                            font-size: .12rem;
+                            color: $minor;
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

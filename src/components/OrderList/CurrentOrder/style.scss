@@ -1,0 +1,162 @@
+@import '~css/public.scss';
+
+.order-wrap {
+  background-color:$pageBg;
+  .order-list {
+    margin-bottom:.15rem;
+    width:100%;
+    background-color:$bg;
+    margin-top:.15rem;
+    .Container {
+      border:0;
+    }
+    .order-header {
+      padding:0 .15rem;
+      .labels-state {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height:.34rem;
+        border-bottom:.005rem solid $minorText;
+        .labels {
+          span {
+            font-size:.14rem;
+          }
+          .sell {
+            color : $sell;
+          }
+          .buy {
+            color : $buy;
+          }
+          .time {
+            font-size:.12rem;
+            color:$minorText;
+            padding-left:.07rem;
+          }
+        }
+        .time {
+          padding-right:.03rem;
+          color:$minor;
+          font-size:.12rem;
+          .icon-shijian {
+            margin-right:.02rem;
+            color:$minor;
+            font-size:.12rem;
+          }
+        }
+        .default-state{
+          color:$warnText;
+        }
+        .revert-state,.fail-state {
+          color:$minorText;
+        }
+        .wait-state {
+          color:$buy;
+        }
+        .success-state {
+          color:$buy;
+        }
+      }
+      .order-detail {
+        padding-bottom:.1rem;
+        .order-item {
+          padding-top:.12rem;
+          font-size:.12rem;
+          display:flex;
+          justify-content: space-between;
+          .item-prise {
+            font-size:.14rem;
+          }
+          .prise-txt {
+            color:$minorText;
+          }
+          .amount {
+            font-size:.16rem;
+          }
+        }
+        .btn {
+          display: flex;
+          justify-content:flex-end;
+          padding:.2rem 0;
+        }
+      }
+    }
+    .order-body {
+      padding:0 .15rem;
+      .operate-btn {
+        display:flex;
+        padding-bottom:.2rem;
+        .btn-revert {
+          margin-right:.1rem;
+        }
+        .padding{
+          width:.2rem;
+        }
+        .btn {
+          flex:1;
+          .btn-middle{
+            width:100%;
+          }
+        }
+      }
+    }
+    .detail-list {
+      .list-item {
+        display: flex;
+        justify-content: space-between;
+        padding:.1rem 0;
+        span {
+          display: block;
+        }
+        .labels {
+          color:$minorText;
+          width:1rem;
+        }
+        .account {
+          color:$main;
+
+        }
+        .icon-fuzhi {
+          margin-right:.03rem;
+          font-size:.12rem;
+        }
+      }
+    }
+    .order-operate {
+      border-top:.005rem solid $minorText;
+      padding-top:.1rem;
+      dl{
+        padding-bottom:.2rem;
+        dt,dd{
+          color:$sell;
+          font-size:0.12rem;
+        }
+      }
+
+
+    }
+  }
+}
+.order-content {
+  padding-bottom:.5rem;
+  .no-data{
+    width:1rem;
+    margin:.3rem auto;
+    text-align: center;
+    .icon-B-Copy2 {
+      font-size:.5rem;
+      color:$minor;
+    }
+    .txt{
+      font-size:.16rem;
+      color:$minor;
+    }
+  }
+  .more {
+    text-align: center;
+    height:.5rem;
+    line-height: .5rem;
+    background-color:$pageBg;
+    cursor: pointer;
+  }
+}

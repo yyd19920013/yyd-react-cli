@@ -1,0 +1,73 @@
+@import '~css/public.scss';
+
+.SelectOption{
+    width: 100%;
+    position: relative;
+    .defaultSelect{
+        width: 100%;
+        padding: .1rem;
+        padding-right: .5rem;
+        height: .5rem;
+        line-height: .3rem;
+        border: .01rem solid $minor;
+        position: relative;
+        .select{
+            color: $minor;
+        }
+        .option{
+            padding-left: 0;
+            background: none!important;
+        }
+        >div{
+            white-space:nowrap;overflow:hidden;text-overflow:ellipsis;word-break:break-all;
+        }
+        &.lIcon{
+            padding-left: .5rem;
+        }
+        .lIcon{
+            padding-left: .1rem;
+            height: .5rem;
+            line-height: .5rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: .16rem;
+            color: $main;
+        }
+        .rIcon{
+            padding-right: .1rem;
+            height: .5rem;
+            line-height: .5rem;
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: .12rem;
+            color: #999;
+        }
+    }
+    .selectList{
+        width: 100%;
+        height: 2.5rem;
+        border: .01rem solid $minor;
+        border-top: none;
+        background-color: #fff;
+        overflow-y: scroll;
+        position: absolute;
+        left: 0;
+        top: .5rem;
+        z-index: 1000;
+        display: none;
+        li{
+            width: 100%;
+            padding: .1rem;
+            line-height: .3rem;
+            background-color: #fff;
+            &.active{
+                background-color: #dfe5ea;
+            }
+        }
+        &.active{
+            display: block;
+        }
+    }
+}

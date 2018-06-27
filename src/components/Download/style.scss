@@ -1,0 +1,32 @@
+@import '~css/public.scss';
+
+.Download{
+    width: 100%;
+    padding: .05rem .1rem;
+    padding-right: 1rem;
+    background-image: linear-gradient(to right,#1a62af,#229bac);
+    position: relative;
+    color: #fff;
+    &.hide{
+        display: none;
+    }
+    h3{
+        line-height: .2rem;
+        font-size: .12rem;
+        color: #fff;
+    }
+    a{
+        width: .8rem;
+        height: .3rem;
+        line-height: .3rem;
+        text-align: center;
+        color: #fff;
+        font-size: .12rem;
+        border-radius: .05rem;
+        background-color: $main;
+        position: absolute;
+        right: .1rem;
+        top: 50%;
+        margin-top: -.15rem;
+    }
+}

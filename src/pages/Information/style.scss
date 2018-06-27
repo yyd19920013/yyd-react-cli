@@ -1,0 +1,72 @@
+@import '~css/public.scss';
+
+.Information{
+    .ContainerWrap{
+        .Download{
+            display: none;
+        }
+        .Container{
+            padding: 0;
+            background-color: $pageBg;
+        }
+        @media all and (min-width: 769px){
+            border-top: .5rem solid transparent;
+        }
+    }
+
+    .infoNav{
+        width: 100%;
+        height: .4rem;
+        background-color: #fff;
+        border-bottom: 0.01rem solid $grayText;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        overflow: hidden;
+        .scrollWrap{
+            width: 100%;
+            height: 1rem;
+            overflow-x: scroll;
+            ol{
+                width: 100%;
+                padding: 0 .1rem;
+                height: .4rem;
+                line-height: .39rem;
+                overflow: hidden;
+                li{
+                    float: left;
+                    margin: 0 .1rem;
+                    a{
+                        color: $minorText;
+                        position: relative;
+                        &.active{
+                            color: $mainText;
+                            &:before{
+                                content: "";
+                                width: .05rem;
+                                height: .05rem;
+                                border: .02rem solid $main;
+                                border-radius: 50%;
+                                position: absolute;
+                                right: -.1rem;
+                                top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media all and (min-width: 769px){
+            &{
+                height: .5rem;
+                .scrollWrap{
+                    height: .5rem;
+                }
+            }
+        }
+        &.active{
+            visibility: hidden;
+        }
+    }
+}

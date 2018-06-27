@@ -1,0 +1,31 @@
+@import '~css/public.scss';
+
+.ProgramaDetail{
+    .Container{
+        background-color: #fff!important;
+    }
+
+    .dataWrap{
+        width: 100%;
+        padding: $padding2;
+        background-color: #fff;
+        .title{
+            width: 100%;
+            line-height: .24rem;
+            text-align: center;
+            font-size: .18rem;
+            margin-bottom: .2rem;
+        }
+        .subhead{
+            line-height: .2rem;
+            color: $minorText;
+            font-size: .12rem;
+            em{
+                margin: 0 .1rem;
+            }
+            b{
+                float: right;
+            }
+        }
+    }
+}

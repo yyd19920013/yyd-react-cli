@@ -1,0 +1,38 @@
+.Tip{
+    display: inline-block;
+    position: relative;
+    i{
+        padding: 0 .1rem;
+        font-size: .14rem;
+        color: #999;
+    }
+    .TipText{
+        width: 2.4rem;
+        padding: .05rem .2rem;
+        line-height: .2rem;
+        border-radius: .05rem;
+        background-color: #555;
+        color: #fff;
+        font-size: .12rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+        transform: translate3d(0,-100%,0);
+        transform: -webkit-translate3d(0,-100%,0);
+        opacity: 1;
+        .triangle{
+            border: .1rem solid transparent;
+            border-top-color: #555;
+            position: absolute;
+            left: .18rem;
+            bottom: -.16rem;
+        }
+    }
+    &.active .TipText{
+        top: -.1rem;
+        transition: opacity 1s linear 3s;
+        opacity: 0;
+        z-index: 100;
+    }
+}

@@ -1,0 +1,48 @@
+@import '../../css/public.scss';
+.btn {
+  button {
+    color:$bg;
+    font-size:.16rem;
+    cursor:pointer;
+  }
+  .radius {
+    border-radius:.04rem;
+  }
+  .btn-big {
+    width:100%;
+    height:.5rem;
+  }
+  .btn-middle {
+    width:1.22rem;
+    height:.425rem;
+  }
+  .btn-small {
+    width:.87rem;
+    height:.3rem;
+  }
+  .btn-disabled {
+    background-color:$disabled
+  }
+  .btn-revert {
+    color:$mainText;
+    background-color:$minor;
+  }
+  .btn-default {
+    color:$mainText;
+    border : .01rem solid $mainText;
+  }
+  .btn-buy {
+    background-color:$buy;
+  }
+  .btn-sell {
+    background-color:$sell;
+  }
+  .btn-confirm {
+    background-color:$main;
+  }
+  .dim {
+    span {
+      opacity: 0.5;
+    }
+  }
+}

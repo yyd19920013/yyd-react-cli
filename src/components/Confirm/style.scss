@@ -1,0 +1,41 @@
+@import '~css/public.scss';
+
+.Confirm{
+    .Dialog{
+        .DialogWrap{
+            .title{
+                height: .3rem;
+                line-height: .3rem;
+                text-align: left;
+                span{
+                    font-size: .14rem;
+                    font-weight: bold;
+                }
+            }
+            .main{
+                padding: $padding2 0;
+            }
+            .end1{
+                width: 100%;
+                height: .4rem;
+                line-height: .39rem;
+                span{
+                    display: inline-block;
+                    width: 48%;
+                    height: 100%;
+                    color: #fff;
+                    text-align: center;
+                    font-size: .16rem;
+                    background-color: $minor;
+                    &:first-of-type{
+                        margin-right: 2%;
+                    }
+                    &:last-of-type{
+                        background-color: $main;
+                        margin-left: 2%;
+                    }
+                }
+            }
+        }
+    }
+}
