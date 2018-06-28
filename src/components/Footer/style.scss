@@ -3,7 +3,7 @@
 .Footer{
     width: 100%;
     height: .5rem;
-    border-top: .01rem solid $grayText;
+    border-top: .01rem solid $minor;
     background-color: #fff;
     position: fixed;
     left: 0;
@@ -23,50 +23,15 @@
         align-items: center;
         -webkit-align-items: center;
         color: $minor;
-        span{
-            padding-top: .25rem;
-            line-height: .2rem;
-            font-size: .12rem;
-            background: url('../../images/icon/icon15.png') no-repeat center .05rem;
-            background-size: .16rem;
-        }
-        &:nth-of-type(2){
-            span{
-                background-image: url('../../images/icon/icon16.png');
-            }
-        }
-        &:nth-of-type(3){
-            span{
-                background-image: url('../../images/icon/icon17.png');
-            }
-        }
-        &:nth-of-type(4){
-            span{
-                background-image: url('../../images/icon/icon18.png');
-            }
-        }
         &.active{
             color: $main;
         }
-        &.active:nth-of-type(1){
-            span{
-                background-image: url('../../images/icon/icon15-active.png');
-            }
+        i{
+            font-size: .16rem;
         }
-         &.active:nth-of-type(2){
-            span{
-                background-image: url('../../images/icon/icon16-active.png');
-            }
-        }
-         &.active:nth-of-type(3){
-            span{
-                background-image: url('../../images/icon/icon17-active.png');
-            }
-        }
-         &.active:nth-of-type(4){
-            span{
-                background-image: url('../../images/icon/icon18-active.png');
-            }
+        span{
+            line-height: .2rem;
+            font-size: .12rem;
         }
     }
 }

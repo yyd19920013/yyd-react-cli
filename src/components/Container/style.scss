@@ -1,18 +1,15 @@
 @import '~css/public.scss';
 
-.ContainerWrap{
+.Container{
     width: 100%;
     border-top: .4rem solid transparent;
     border-bottom: .5rem solid transparent;
-    .Container{
-        width: 100%;
-        padding: 0 $padding2;
-        margin: 0 auto;
-        background-color: $bg;
-        position: relative;
-        @media all and (min-width:376px){
-            width: 3.75rem;
-        }
+    padding: 0 $padding2;
+    margin: 0 auto;
+    background-color: $bg;
+    position: relative;
+    @media all and (min-width:376px){
+        width: 3.75rem;
     }
 }
 

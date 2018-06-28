@@ -1,4 +1,4 @@
-import Decimal from 'decimal.js';
+import Decimal from 'yyd-decimal';
 
 // JavaScript Document
 
@@ -717,6 +717,34 @@ function strToJson1(str){
 	return str;
 };
 
+//传入json，转换成带?的表单格式的url地址
+//json(要转换的对象)
+//arr(要删除json的key的数组)
+//href(要定制的href)
+function jsonToStr(json,arr,href){
+	var str='';
+	var href=href||(window.location.origin+window.location.pathname);
+
+	for(var i=0;i<arr.length;i++){
+		delete json[arr[i]];
+	}
+	for(var attr in json){
+		str+=attr+'='+json[attr]+'&';
+	}
+	str=href+'?'+str.substr(0,str.length-1);
+	return str;
+};
+
+//正则匹配获取search参数
+//不会有报错，比较安全
+function getSearch(key,str){
+	var reg=new RegExp('(^|&|\\?)'+key+'=([^&]+)(&|$)');
+	var str=str||window.location.search;
+	var matchStr=str.match(reg);
+
+	return matchStr&&matchStr[2]||null;
+};
+
 //json克隆副本
 function Json(json){
 	return json?JSON.parse(JSON.stringify(json)):'';
@@ -755,30 +783,6 @@ function htmlFontSize(getFontSize){
 };
 
 
-
-//旋转360核心函数
-//根据半径和角度获得x和y的坐标
-function circleGetXY(radius,angle){
-	return{x:Math.round(Math.sin(angle*Math.PI/180)*radius),y:Math.round(Math.cos(angle*Math.PI/180)*radius)}
-};
-//过渡结束时候初始化属性
-function transitionEndFn(){
-	this.style.transition='50ms 100ms';
-	this.style.transform='scale(1) rotate(-720deg)';
-	this.style.opacity=1;
-	this.style.filter='alpha(opacity:1)';
-	removeEnd(this)	;
-};
-//元素过渡结束的时候加上transitionEndFn函数
-function addEnd(obj){
-	obj.addEventListener('transitionend',transitionEndFn,false);
-	obj.addEventListener('webkitTransitionEnd',transitionEndFn,false);
-};
-//元素过渡结束的时候再删除transitionEndFn函数
-function removeEnd(obj){
-	obj.removeEventListener('transitionend',transitionEndFn,false);
-	obj.removeEventListener('webkitTransitionEnd',transitionEndFn,false);
-};
 
 //查看键值修正版
 function keyCode(){
@@ -3017,55 +3021,6 @@ function computed(num1,operator,num2){
 	return result;
 };
 
-function changeTwoDecimal_f(x) {
-		var f_x = parseFloat(x);
-		if (isNaN(f_x)) {
-			alert('function:changeTwoDecimal->parameter error');
-			return false;
-		}
-		var f_x = Math.floor(x*100)/100;
-		var s_x = f_x.toString();
-		var pos_decimal = s_x.indexOf('.');
-		if (pos_decimal < 0) {
-			pos_decimal = s_x.length;
-			s_x += '.';
-		}
-		while (s_x.length <= pos_decimal + 2) {
-			s_x += '0';
-		}
-		return s_x;
-};
-
-//获取数组中最大值
-function getArrMax(arr) {
-    return Math.max.apply(Math, arr)
-};
-
-//字符首字母大写
-function titleCase(str) {
-
-    var array = str.toLowerCase().split(" ");
-    for (var i = 0; i < array.length; i++){
-        array[i] = array[i][0].toUpperCase() + array[i].substring(1, array[i].length);
-
-        //array[i][0] = array[i][0] + 'A' - 'a';
-    }
-    var string = array.join(" ");
-
-    return string;
-}
-
-//获取url参数
-function getQueryString(name) {
-    let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", 'i'); // 匹配目标参数
-    let result = window.location.search.substr(1).match(reg); // 对querystring匹配目标参数
-    if (result != null) {
-        return decodeURIComponent(result[2]);
-    } else {
-        return null;
-    }
-};
-
 //历史跳转路由地址
 let routerMap=[];
 
@@ -3076,80 +3031,68 @@ function getPrevPathname(pathname){
 
 //项目中用到的工具函数
 export{
+		Decimal,//decimal.js插件
 		reactRadio,//单选框
 		reactCheck,//复选框
 		reactSelect,//下拉框
-		consoleNull,
-		routerChange,
-		toast,
-		allHaveValue,
-		computed,
 
-		getDecimal,//格式化金额
+		getDecimal,
 		limitLength,
 		colorPrice,
 		shortDate,
 
 		QSA,
 		ajax,
+		Type,
+		yydTimer,
 		getStyle,
 		prevSibling,
 		nextSibling,
 		firstChild,
 		lastChild,
+		AddClass,
+		HasClass,
 		bind,
 		unbind,
+		getPos,
 		htmlFontSize,
+		consoleNull,
+		routerChange,
+		css,
+		tweenMove,
+		toTwo,
+		normalDate,
 		dateFormat0,
 		dateFormat1,
-		alerts,
+		countDtime,
 		soleString32,
 		autoEvent,
 		customEvent,
-		textHandle,
-		loadingMask,
-		Json,
-		goTop,
-		resetFile,
+		alerts,
+		toast,
 		alertss,
-		brush,
-		fly,
+		allHaveValue,
+		computed,
+		cBub,
+		pDef,
+		Json,
 		isWeixin,
+		isSafari,
 		cookie,
 		lStore,
 		sStore,
-		inputType,
 		strToJson,
 		strToJson1,
-		imgDrag,
-		fix,
+		getSearch,
 		preload,
-		yydTimer,
-		autoClipImage,
-		toTwo,
-		yydTabBar,
-		Type,
-		getLocation1,
-		autoNotice1,
-		networkHandle,
 		setPromise,
-		countDtime,
 		createGaodeMapUrl1,
 		createGaodeMapUrl2,
 		createGaodeMapUrl3,
 		getFlatternDistance,
-		changeTwoDecimal_f,
-		getPos,
-		HasClass,
-		isSafari,
-		pDef,
-		tweenMove,
-		css,
-		normalDate,
-		AddClass,
-		titleCase,
-    	getArrMax,
-		getQueryString,
+		autoClipImage,
+		goTop,
+
 		routerMap,
 		getPrevPathname,
 	};

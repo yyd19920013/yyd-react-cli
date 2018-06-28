@@ -1,15 +1,10 @@
 @import '~css/public.scss';
 
 .Information{
-    .ContainerWrap{
-        .Download{
-            display: none;
-        }
-        .Container{
-            padding: 0;
-            background-color: $pageBg;
-        }
-        @media all and (min-width: 769px){
+    .Container{
+        padding: 0;
+        background-color: $pageBg;
+            @media all and (min-width: 769px){
             border-top: .5rem solid transparent;
         }
     }

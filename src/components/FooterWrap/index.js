@@ -12,20 +12,24 @@ export default class FooterWrap extends React.Component{
         this.state={
             dataList:[
                 {
-                    name:'资讯',
-                    to:'/information/index',
+                    name:'账户',
+                    iconName:'icon-B-3',
+                    to:'/account',
                 },
                 {
-                    name:'行情',
-                    to:'/market',
+                    name:'指数',
+                    iconName:'icon-A-4',
+                    to:'/exponent/buy_usdt',
                 },
                 {
                     name:'推广',
+                    iconName:'icon-A-1',
                     to:'/popularize',
                 },
                 {
-                    name:'我的',
-                    to:'/account/personal_center',
+                    name:'数据',
+                    iconName:'icon-A-6',
+                    to:'/data',
                 },
             ],
         };

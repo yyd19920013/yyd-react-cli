@@ -13,6 +13,7 @@ export default class Footer extends React.Component{
     static defaultProps={
         dataList:[{//要展示在Footer的数据
             name:'底部导航',//显示的文字
+            iconName:'icon-B-3',//icon的名字
             to:'123',//跳转的地址
         }],
     }
@@ -21,20 +22,24 @@ export default class Footer extends React.Component{
         <Footer
             dataList={[
                 {
-                    name:'资讯',
-                    to:'/information/index',
+                    name:'账户',
+                    iconName:'icon-B-3',
+                    to:'123',
                 },
                 {
-                    name:'行情',
-                    to:'/exponent',
+                    name:'指数',
+                    iconName:'icon-A-4',
+                    to:'1234',
                 },
                 {
                     name:'推广',
-                    to:'/popularize',
+                    iconName:'icon-A-1',
+                    to:'12345',
                 },
                 {
-                    name:'我的',
-                    to:'/account/personal_center',
+                    name:'数据',
+                    iconName:'icon-A-6',
+                    to:'123456',
                 },
             ]}
         />
@@ -48,6 +53,7 @@ export default class Footer extends React.Component{
                 {dataList.map((item,index)=>{
                     return(
                         <NavLink activeClassName="active" key={index} to={item.to?item.to:'/'}>
+                            <i className={'iconfont '+(item.iconName?item.iconName:'')}></i>
                             <span>{item.name}</span>
                         </NavLink>
                     );

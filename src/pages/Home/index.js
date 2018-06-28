@@ -27,9 +27,10 @@ export default class Home extends React.Component{
 
     }
     componentDidMount(){
-        if(browser.location.pathname=='/')browser.replace('/boot_page');
-
+        //跳转首页
         (function(This){
+            if(browser.location.pathname=='/')browser.replace('/boot_page');
+
             //触发componentDidUpdate钩子，改变body背景
             This.setState({
                 change:true,

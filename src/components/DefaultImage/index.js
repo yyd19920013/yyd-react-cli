@@ -30,10 +30,6 @@ export default class DefaultImage extends React.Component{
                 url:require('images/icon/icon1.png'),
                 hint:'暂无数据',
             },
-            {
-                url:require('images/icon/icon21.png'),
-                hint:'暂无交易排名',
-            },
         ];
     }
 
